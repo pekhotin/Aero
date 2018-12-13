@@ -2,9 +2,64 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Табло аэропорта</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <p>Hello!</p>
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Табло аэропорта "Большое савино"</h1>
+        <ul class="nav nav-pills nav-justified">
+            <li role="presentation" class="active"><a href="#">Все</a></li>
+            <li role="presentation"><a href="#">Вылетающие</a></li>
+            <li role="presentation"><a href="#">Прилетающие</a></li>
+            <li role="presentation"><a href="#">Задерживающиеся</a></li>
+            <li role="presentation">
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+                    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="row margin">
+        <table class="table table-bordered table-striped table-condensed">
+            <tr>
+                <th>Время</th>
+                <th>Город</th>
+                <th>Авиакомпания</th>
+                <th>Номер рейса</th>
+                <th>Статус</th>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Пермь</td>
+                <td>S7 Airlines</td>
+                <td>3601</td>
+                <td>Ожидается посадка</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Пермь</td>
+                <td>S7 Airlines</td>
+                <td>3601</td>
+                <td>Ожидается посадка</td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td>Пермь</td>
+                <td>S7 Airlines</td>
+                <td>3601</td>
+                <td>Ожидается посадка</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
