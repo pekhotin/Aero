@@ -73,10 +73,11 @@ function getFlights(type) {
 
             $.each(result.flightStatuses, function (index, flight) {
                 if (type !== 'delay' || type === 'delay' && flight.delays !== undefined) {
-                    var flightDate = new Date(flight.arrivalDate.dateLocal);
+                    var flightDate = new Date(type === 'arrive' ? flight.arrivalDate.dateLocal : flight.departureDate.dateLocal);
                     $('#flightTable tr:last').after('<tr>' +
                         '<td>' + getTime(flightDate) + '</td>' +
                         '<td>' + cities[flight.departureAirportFsCode] + '</td>' +
+                        '<td>' + cities[flight.arrivalAirportFsCode] + '</td>' +
                         '<td>' + airlines[flight.carrierFsCode] + '</td>' +
                         '<td>' + flight.flightNumber + '</td>' +
                         '<td>' + getStatus(flight.status) +'</td>' +
