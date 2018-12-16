@@ -26,7 +26,7 @@ $year = $_GET['year'];
 $appId = $_GET['appId'];
 $appKey = $_GET['appKey'];
 
-$responce = CallAPI("https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/".
+$url = "https://api.flightstats.com/flex/flightstatus/rest/v2/json/airport/status/".
     $airport . "/" .
     $type . "/" .
     $year . "/" .
@@ -35,6 +35,8 @@ $responce = CallAPI("https://api.flightstats.com/flex/flightstatus/rest/v2/json/
     $hour .
     "?appId=" . $appId .
     "&appKey=" . $appKey .
-    "&utc=false&numHours=6&maxFlights=10");
+    "&utc=false&numHours=6&maxFlights=10";
+
+$responce = CallAPI($url);
 
 echo $responce;

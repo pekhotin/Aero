@@ -1,11 +1,11 @@
 var appId = '05b2a8bb';
 var appKey = '15d4f32508a17b4b8730de19265d81c4';
+var airport = 'PEE';
 var date = new Date();
-var hour = date.getHours() - 4;
+var hour = date.getHours();
 var day = date.getDate();
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
-var airport = 'PEE';
 
 var cities = [];
 var airlines = [];
